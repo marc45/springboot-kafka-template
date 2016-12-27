@@ -1,0 +1,9 @@
+jar {
+	baseName = 'springboot-kafka-template-common'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+	compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+}

@@ -1,0 +1,20 @@
+jar {
+	baseName = 'springboot-kafka-template-consumer'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+	compile project(':common')
+
+	compile 'org.springframework.boot:spring-boot-starter'
+	compile "org.springframework.boot:spring-boot-configuration-processor"
+
+	compile "org.apache.kafka:kafka-clients:0.10.1.1"
+	compile "org.springframework.kafka:spring-kafka:1.1.1.RELEASE"
+	compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile "org.springframework.kafka:spring-kafka-test:1.1.1.RELEASE"
+}

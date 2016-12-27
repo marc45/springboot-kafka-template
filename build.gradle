@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'https://repo.spring.io/libs-snapshot'
+        }
+    }
+
+    dependencies {
+        compile 'com.google.guava:guava:20.0'
+        compile 'org.projectlombok:lombok:1.16.12'
+    }
+
+    compileJava.dependsOn(processResources)
+}
