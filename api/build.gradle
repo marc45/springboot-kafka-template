@@ -8,7 +8,6 @@ dependencies {
 
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile "org.springframework.boot:spring-boot-configuration-processor"
-
 	compile "org.apache.kafka:kafka-clients:0.10.1.1"
 	compile "org.springframework.kafka:spring-kafka:1.1.1.RELEASE"
 

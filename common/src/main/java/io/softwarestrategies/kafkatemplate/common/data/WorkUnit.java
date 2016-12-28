@@ -8,22 +8,22 @@ import lombok.Data;
 @Data
 public class WorkUnit {
     private String id;
-    private String definition;
+    private String description;
 
     public WorkUnit() {}
 
     @JsonCreator
     public WorkUnit(@JsonProperty("id") String id,
-                    @JsonProperty("definition") String definition) {
+                    @JsonProperty("description") String description) {
         this.id = id;
-        this.definition = definition;
+        this.description = description;
     }
 
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
-                .add("definition", definition)
+                .add("description", description)
                 .toString();
     }
 }

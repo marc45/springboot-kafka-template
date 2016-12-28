@@ -1,6 +1,5 @@
 package io.softwarestrategies.kafkatemplate.api.config;
 
-import io.softwarestrategies.kafkatemplate.api.data.KafkaProducerProperties;
 import io.softwarestrategies.kafkatemplate.common.data.WorkUnit;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.Serializer;

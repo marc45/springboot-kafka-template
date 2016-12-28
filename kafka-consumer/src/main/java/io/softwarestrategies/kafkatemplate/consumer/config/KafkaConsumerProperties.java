@@ -1,4 +1,4 @@
-package io.softwarestrategies.kafkatemplate.consumer.data;
+package io.softwarestrategies.kafkatemplate.consumer.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

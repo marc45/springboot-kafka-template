@@ -1,7 +1,6 @@
 package io.softwarestrategies.kafkatemplate.consumer.config;
 
 import io.softwarestrategies.kafkatemplate.common.data.WorkUnit;
-import io.softwarestrategies.kafkatemplate.consumer.data.KafkaConsumerProperties;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
