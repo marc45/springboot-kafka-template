@@ -7,8 +7,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication
 @EnableConfigurationProperties(KafkaConsumerProperties.class)
-public class KafkaTemplateConsumerApp {
+public class KafkaConsumerApp {
     public static void main(String[] args) {
-        SpringApplication.run(KafkaTemplateConsumerApp.class, args);
+        SpringApplication.run(KafkaConsumerApp.class, args);
     }
 }
