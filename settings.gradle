@@ -1,1 +1,1 @@
-include('common', 'api', 'kafka-consumer')
+include('common', 'api', 'kafka-consumer', "config-server")
