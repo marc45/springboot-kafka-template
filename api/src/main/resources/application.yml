@@ -1,7 +1,0 @@
-server:
-  port: 7070
-
-kafka:
-  producer:
-    bootstrap: localhost:9092
-    topic: workunits

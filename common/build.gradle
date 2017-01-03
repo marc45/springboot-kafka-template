@@ -1,5 +1,5 @@
 jar {
-	baseName = 'springboot-kafka-template-common'
+	baseName = 'collagethis-common'
 	version = '0.0.1-SNAPSHOT'
 }
 

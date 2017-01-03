@@ -1,9 +1,27 @@
-target/
-.settings/
-.springBeans
+.gradle
+/build/
+!gradle-wrapper.jar
+
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.idea/
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
 build/
-.gradle/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
