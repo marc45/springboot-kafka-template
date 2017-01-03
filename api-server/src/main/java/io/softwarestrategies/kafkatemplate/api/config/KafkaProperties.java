@@ -5,9 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "kafka.producer")
+@ConfigurationProperties(prefix = "kafka")
 @Data
-public class KafkaProducerProperties {
+public class KafkaProperties {
     private String bootstrap;
     private String topic;
 }

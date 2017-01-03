@@ -18,13 +18,13 @@ import java.util.Map;
 
 @Configuration
 @EnableKafka
-public class KafkaConsumerConfig {
+public class KafkaConfig {
 
-    private KafkaConsumerProperties kafkaConsumerProperties;
+    private KafkaProperties kafkaProperties;
 
     @Autowired
-    public KafkaConsumerConfig(KafkaConsumerProperties kafkaConsumerProperties) {
-        this.kafkaConsumerProperties = kafkaConsumerProperties;
+    public KafkaConfig(KafkaProperties kafkaProperties) {
+        this.kafkaProperties = kafkaProperties;
     }
 
     @Bean
@@ -44,8 +44,8 @@ public class KafkaConsumerConfig {
     @Bean
     public Map<String, Object> consumerProps() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConsumerProperties.getBootstrap());
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaConsumerProperties.getGroup());
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProperties.getBootstrap());
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaProperties.getGroup());
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "100");
         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, "15000");

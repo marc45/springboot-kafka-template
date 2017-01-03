@@ -16,13 +16,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class KafkaProducerConfig {
+public class KafkaConfig {
 
-    private KafkaProducerProperties kafkaProducerProperties;
+    private KafkaProperties kafkaProperties;
 
     @Autowired
-    public KafkaProducerConfig(KafkaProducerProperties kafkaProducerProperties) {
-        this.kafkaProducerProperties = kafkaProducerProperties;
+    public KafkaConfig(KafkaProperties kafkaProperties) {
+        this.kafkaProperties = kafkaProperties;
     }
 
     @Bean
@@ -33,14 +33,14 @@ public class KafkaProducerConfig {
     @Bean
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProducerProperties.getBootstrap());
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProperties.getBootstrap());
         return props;
     }
 
     @Bean
     public KafkaTemplate<String, WorkUnit> workUnitsKafkaTemplate() {
         KafkaTemplate<String, WorkUnit> kafkaTemplate =  new KafkaTemplate<>(producerFactory());
-        kafkaTemplate.setDefaultTopic(kafkaProducerProperties.getTopic());
+        kafkaTemplate.setDefaultTopic(kafkaProperties.getTopic());
         return kafkaTemplate;
     }
 
